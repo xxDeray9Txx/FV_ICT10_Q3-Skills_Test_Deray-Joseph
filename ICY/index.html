@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Guitar Store Sign Up</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- PyScript -->
+  <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+  <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f6f8;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      padding-top: 70px; /* space for fixed-top navbar */
+      margin: 0;
+    }
+
+    /* Avoid colliding with Bootstrap .container */
+    .card-container {
+      background: white;
+      padding: 25px;
+      border-radius: 10px;
+      width: 320px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      margin-bottom: 24px;
+    }
+
+    input {
+      width: 90%;
+      padding: 8px;
+      margin: 8px 0;
+    }
+
+    button {
+      padding: 10px 15px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    #result {
+      margin-top: 15px;
+      font-weight: bold;
+      white-space: pre-line;
+    }
+
+    .box1 {
+      background-color: rgba(0,0,0,0.6);
+      color: #fff;
+      padding: 20px;
+      border-radius: 15px;
+      margin: 16px;
+      max-width: 900px;
+      width: calc(100% - 32px);
+      box-sizing: border-box;
+    }
+
+    .box1 .title h1 {
+      margin: 0 0 8px 0;
+      font-size: 1.6rem;
+    }
+
+    .box1 .title p {
+      margin: 0;
+      line-height: 1.4;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-md bg-danger navbar-dark fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Guitar Store</a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+              aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Sign Up</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="error.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="error.html">Guitar items</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Box1 placed above the sign up card -->
+  <div class="box1">
+    <div class="title">
+      <h1>Welcome to the Guitar Store</h1>
+      <p>Discover a wide range of guitars, from classic acoustics to modern electrics. Whether you're a beginner or a seasoned player, we have the perfect guitar for you. Explore our collection and find your sound today!</p>
+    </div>
+  </div>
+  <br><br><br>
+
+  <!-- Sign up card -->
+  <div class="card-container">
+    <h2>Account Creation</h2>
+    <input type="text" id="username" maxlength="50" placeholder="Username (min 7 chars)">
+    <br>
+    <input type="password" id="password" maxlength="50" placeholder="Password (min 10 chars, 1 letter, 1 number)">
+    <br>
+    <button py-click="create_account">Create Account</button>
+    <div id="result"></div>
+  </div>
+  
+
+  <br><br><br><br><br>
+
+
+  <div class="col-md-6">
+<h2 align="center">Due to technical and security issues, this website is temporarily unavailable but still will be accepting account creations to reserve time for the user to attend to our website once fixed. We apologize for your inconvenience. </h2>
+
+  
+  </div>
+
+  <!-- PyScript -->
+  <script type="py" src="main.py"></script>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
